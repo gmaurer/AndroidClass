@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "442718739355",
+    "project_id": "firebase-runescapeproject"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:442718739355:android:12ce332b47e03c7a",
+        "android_client_info": {
+          "package_name": "classproject.runescape"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "442718739355-4rfju38hjn3lr954f4d8m0hlkn3timl7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "classproject.runescape",
+            "certificate_hash": "7E00B2D88510AA009D3E7DEC3AA585ABA6DCEFFF"
+          }
+        },
+        {
+          "client_id": "442718739355-folut4qd6qfdivqimbneqo5hjqvh8k9u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhitZTUJ7VuYv1dqONgAH8o9LbrqPtKMc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
