@@ -1,10 +1,17 @@
 package classproject.runescape;
 
-import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.view.ViewPager;
 
-/*public class MainActivity extends AppCompatActivity   {
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.TabHost;
+
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+
+public class MainActivity extends AppCompatActivity   {
+
+    TabHost tabHost;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,6 +21,29 @@ import android.support.v4.view.ViewPager;
                 .requestEmail()
                 .build();
 
+        TabHost host = (TabHost)findViewById(R.id.tabHost);
+        host.setup();
+
+        //Tab 1
+        TabHost.TabSpec spec = host.newTabSpec("New School");
+        spec.setContent(R.id.tabNew);
+        spec.setIndicator("New School");
+        host.addTab(spec);
+
+        //Tab 2
+        spec = host.newTabSpec("Old School");
+        spec.setContent(R.id.tabOld);
+        spec.setIndicator("Old School");
+        host.addTab(spec);
+
+        //Tab 3
+        spec = host.newTabSpec("Iron Man");
+        spec.setContent(R.id.tabIron);
+        spec.setIndicator("Iron Man");
+        host.addTab(spec);
+
+
+        //tabHost.setCurrentTab(R.id.tabNew);
     }
 
     public void openClans(View v){
@@ -72,36 +102,6 @@ import android.support.v4.view.ViewPager;
 
     }
 
-}*/
-public class MainActivity extends FragmentActivity implements
-        ActionBar.TabListener {
-
-    private ViewPager viewPager;
-    private TabsPagerAdapter mAdapter;
-    private ActionBar actionBar;
-    // Tab titles
-    private String[] tabs = {"Top Rated", "Games", "Movies"};
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        // Initilization
-        viewPager = (ViewPager) findViewById(R.id.pager);
-        actionBar = getActionBar();
-        mAdapter = new TabsPagerAdapter(getSupportFragmentManager());
-
-        viewPager.setAdapter(mAdapter);
-        actionBar.setHomeButtonEnabled(false);
-        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-
-        // Adding Tabs
-        for (String tab_name : tabs) {
-            actionBar.addTab(actionBar.newTab().setText(tab_name)
-                    .setTabListener(this));
-        }
-    }
 }
 
 
