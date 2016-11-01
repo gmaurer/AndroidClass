@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity   {
                 .requestEmail()
                 .build();
 
+
+
         TabHost host = (TabHost)findViewById(R.id.tabHost);
         host.setup();
 
@@ -45,7 +47,22 @@ public class MainActivity extends AppCompatActivity   {
 
         //tabHost.setCurrentTab(R.id.tabNew);
     }
+    public void openNew(View v){
+        Intent i = new Intent(getApplicationContext(),Clans.class);
+        startActivity(i);
+        //CLICK IS REGISTERED, ADD CODE TO OPEN A FRAGMENT
 
+    }
+    public void openOld(View v){
+        Intent i = new Intent(getApplicationContext(),Favorites.class);
+        startActivity(i);
+
+    }
+    public void openIron(View v){
+        Intent i = new Intent(getApplicationContext(),ItemSearch.class);
+        startActivity(i);
+
+    }
     public void openClans(View v){
         Intent i = new Intent(getApplicationContext(),Clans.class);
         startActivity(i);
