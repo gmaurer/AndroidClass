@@ -25,7 +25,6 @@ public class ApiRetrievalClass {
             URL url = new URL(urlstring);
             urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod("GET");
-            urlConnection.connect();
 
             InputStream inputStream = urlConnection.getInputStream();
             StringBuffer buffer = new StringBuffer();
@@ -45,6 +44,7 @@ public class ApiRetrievalClass {
             }
             String rawData = buffer.toString();
             SkillsHolder output = RawStringParser(rawData);
+            return output;
         } catch (Exception e) {
             SkillsHolder badtemp =  new SkillsHolder();
             badtemp.CreateError();
