@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="1">
-
+    <Button
+        android:text="X"
+        android:layout_width="39dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/button15"
+        android:layout_marginLeft="290dp"
+        android:onClick="goBack"/>
     <ImageView
         android:layout_width="555dp"
         android:layout_height="match_parent"
@@ -13,434 +19,490 @@
         android:layout_below="@+id/button"
         android:layout_x="-73dp"
         android:layout_y="0dp" />
-
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_marginLeft="82dp"
+        android:layout_marginTop="65dp"
+        >
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_weight=".33"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="50"
         android:textSize="32sp"
-        android:id="@+id/miningText"
+        android:id="@+id/attackText"
         android:textColor="#ffffff"
         android:layout_marginEnd="22dp"
-        android:layout_marginTop="72dp"
         android:layout_alignTop="@+id/imageView"
         android:layout_toStartOf="@+id/button"
         android:layout_x="300dp"
         android:layout_y="62dp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="50"
-        android:textSize="32sp"
-        android:id="@+id/smithingText"
-        android:textColor="#ffffff"
-        android:layout_marginEnd="22dp"
-        android:layout_marginTop="72dp"
-        android:layout_alignTop="@+id/imageView"
-        android:layout_toStartOf="@+id/button"
-        android:layout_x="307dp"
-        android:layout_y="109dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="50"
-        android:textSize="32sp"
-        android:id="@+id/fishingText"
-        android:textColor="#ffffff"
-        android:layout_marginEnd="22dp"
-        android:layout_marginTop="72dp"
-        android:layout_alignTop="@+id/imageView"
-        android:layout_toStartOf="@+id/button"
-        android:layout_x="307dp"
-        android:layout_y="150dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="50"
-        android:textSize="32sp"
-        android:id="@+id/cookingText"
-        android:textColor="#ffffff"
-        android:layout_marginEnd="22dp"
-        android:layout_marginTop="72dp"
-        android:layout_alignTop="@+id/imageView"
-        android:layout_toStartOf="@+id/button"
-        android:layout_x="305dp"
-        android:layout_y="192dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="50"
-        android:textSize="32sp"
-        android:id="@+id/fireText"
-        android:textColor="#ffffff"
-        android:layout_marginEnd="22dp"
-        android:layout_marginTop="72dp"
-        android:layout_alignTop="@+id/imageView"
-        android:layout_toStartOf="@+id/button"
-        android:layout_x="307dp"
-        android:layout_y="238dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="50"
-        android:textSize="32sp"
-        android:id="@+id/woodText"
-        android:textColor="#ffffff"
-        android:layout_marginEnd="22dp"
-        android:layout_marginTop="72dp"
-        android:layout_alignTop="@+id/imageView"
-        android:layout_toStartOf="@+id/button"
-        android:layout_x="303dp"
-        android:layout_y="281dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="50"
-        android:textSize="32sp"
-        android:id="@+id/farmText"
-        android:textColor="#ffffff"
-        android:layout_marginEnd="22dp"
-        android:layout_marginTop="72dp"
-        android:layout_alignTop="@+id/imageView"
-        android:layout_toStartOf="@+id/button"
-        android:layout_x="303dp"
-        android:layout_y="323dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="50"
-        android:textSize="32sp"
-        android:id="@+id/summonText"
-        android:textColor="#ffffff"
-        android:layout_marginEnd="22dp"
-        android:layout_marginTop="72dp"
-        android:layout_alignTop="@+id/imageView"
-        android:layout_toStartOf="@+id/button"
-        android:layout_x="299dp"
-        android:layout_y="365dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="50"
-        android:textSize="32sp"
-        android:id="@+id/inventionText"
-        android:textColor="#ffffff"
-        android:layout_marginEnd="22dp"
-        android:layout_marginTop="72dp"
-        android:layout_alignTop="@+id/imageView"
-        android:layout_toStartOf="@+id/button"
-        android:layout_x="303dp"
-        android:layout_y="410dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="24"
-        android:textSize="32sp"
-        android:id="@+id/attackText"
-        android:textColor="#ffffff"
-        android:layout_marginEnd="22dp"
-        android:layout_marginTop="72dp"
-        android:layout_alignTop="@+id/imageView"
-        android:layout_toStartOf="@+id/button"
-        android:layout_x="104dp"
-        android:layout_y="65dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
+        android:layout_weight=".33"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="50"
         android:textSize="32sp"
         android:id="@+id/healthText"
         android:textColor="#ffffff"
         android:layout_marginEnd="22dp"
-        android:layout_marginTop="72dp"
         android:layout_alignTop="@+id/imageView"
         android:layout_toStartOf="@+id/button"
-        android:layout_x="205dp"
-        android:layout_y="65dp" />
-
+        android:layout_x="307dp"
+        android:layout_y="109dp" />
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_weight=".33"
         android:layout_height="wrap_content"
         android:text="50"
         android:textSize="32sp"
-        android:id="@+id/agilityText"
+        android:id="@+id/miningText"
         android:textColor="#ffffff"
         android:layout_marginEnd="22dp"
-        android:layout_marginTop="72dp"
         android:layout_alignTop="@+id/imageView"
         android:layout_toStartOf="@+id/button"
-        android:layout_x="205dp"
-        android:layout_y="105dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
+        android:layout_x="307dp"
+        android:layout_y="150dp"
+        android:layout_width="0dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="50"
-        android:textSize="32sp"
-        android:id="@+id/herbText"
-        android:textColor="#ffffff"
-        android:layout_marginEnd="22dp"
-        android:layout_marginTop="72dp"
-        android:layout_alignTop="@+id/imageView"
-        android:layout_toStartOf="@+id/button"
-        android:layout_x="206dp"
-        android:layout_y="152dp" />
-
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_marginLeft="82dp"
+        android:layout_marginTop="7dp"
+        >
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="50"
-        android:textSize="32sp"
-        android:id="@+id/thievingText"
-        android:textColor="#ffffff"
-        android:layout_marginEnd="22dp"
-        android:layout_marginTop="72dp"
-        android:layout_alignTop="@+id/imageView"
-        android:layout_toStartOf="@+id/button"
-        android:layout_x="206dp"
-        android:layout_y="194dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="50"
-        android:textSize="32sp"
-        android:id="@+id/craftText"
-        android:textColor="#ffffff"
-        android:layout_marginEnd="22dp"
-        android:layout_marginTop="72dp"
-        android:layout_alignTop="@+id/imageView"
-        android:layout_toStartOf="@+id/button"
-        android:layout_x="203dp"
-        android:layout_y="238dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="50"
-        android:textSize="32sp"
-        android:id="@+id/fletchText"
-        android:textColor="#ffffff"
-        android:layout_marginEnd="22dp"
-        android:layout_marginTop="72dp"
-        android:layout_alignTop="@+id/imageView"
-        android:layout_toStartOf="@+id/button"
-        android:layout_x="203dp"
-        android:layout_y="278dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="50"
-        android:textSize="32sp"
-        android:id="@+id/slayerText"
-        android:textColor="#ffffff"
-        android:layout_marginEnd="22dp"
-        android:layout_marginTop="72dp"
-        android:layout_alignTop="@+id/imageView"
-        android:layout_toStartOf="@+id/button"
-        android:layout_x="204dp"
-        android:layout_y="326dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="50"
-        android:textSize="32sp"
-        android:id="@+id/huntText"
-        android:textColor="#ffffff"
-        android:layout_marginEnd="22dp"
-        android:layout_marginTop="72dp"
-        android:layout_alignTop="@+id/imageView"
-        android:layout_toStartOf="@+id/button"
-        android:layout_x="207dp"
-        android:layout_y="363dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="50"
-        android:textSize="32sp"
-        android:id="@+id/divinationText"
-        android:textColor="#ffffff"
-        android:layout_marginEnd="22dp"
-        android:layout_marginTop="72dp"
-        android:layout_alignTop="@+id/imageView"
-        android:layout_toStartOf="@+id/button"
-        android:layout_x="204dp"
-        android:layout_y="410dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
+        android:layout_weight=".33"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="50"
         android:textSize="32sp"
         android:id="@+id/strengthText"
         android:textColor="#ffffff"
         android:layout_marginEnd="22dp"
-        android:layout_marginTop="72dp"
         android:layout_alignTop="@+id/imageView"
         android:layout_toStartOf="@+id/button"
-        android:layout_x="106dp"
-        android:layout_y="111dp" />
-
+        android:layout_x="305dp"
+        android:layout_y="192dp" />
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_weight=".33"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="50"
+        android:textSize="32sp"
+        android:id="@+id/agilityText"
+        android:textColor="#ffffff"
+        android:layout_marginEnd="22dp"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_toStartOf="@+id/button"
+        android:layout_x="307dp"
+        android:layout_y="238dp" />
+    <TextView
+        android:layout_weight=".33"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="50"
+        android:textSize="32sp"
+        android:id="@+id/smithingText"
+        android:textColor="#ffffff"
+        android:layout_marginEnd="22dp"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_toStartOf="@+id/button"
+        android:layout_x="303dp"
+        android:layout_y="281dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_marginLeft="82dp"
+        android:layout_marginTop="7dp"
+        >
+    <TextView
+        android:layout_weight=".33"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="50"
         android:textSize="32sp"
         android:id="@+id/defenseText"
         android:textColor="#ffffff"
         android:layout_marginEnd="22dp"
-        android:layout_marginTop="72dp"
         android:layout_alignTop="@+id/imageView"
         android:layout_toStartOf="@+id/button"
-        android:layout_x="106dp"
-        android:layout_y="150dp" />
-
+        android:layout_x="303dp"
+        android:layout_y="323dp" />
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_weight=".33"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="50"
+        android:textSize="32sp"
+        android:id="@+id/herbText"
+        android:textColor="#ffffff"
+        android:layout_marginEnd="22dp"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_toStartOf="@+id/button"
+        android:layout_x="299dp"
+        android:layout_y="365dp" />
+    <TextView
+        android:layout_weight=".33"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="50"
+        android:textSize="32sp"
+        android:id="@+id/fishingText"
+        android:textColor="#ffffff"
+        android:layout_marginEnd="22dp"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_toStartOf="@+id/button"
+        android:layout_x="303dp"
+        android:layout_y="410dp" />
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_marginLeft="82dp"
+        android:layout_marginTop="7dp"
+        >
+    <TextView
+        android:layout_weight=".33"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="24"
         android:textSize="32sp"
         android:id="@+id/rangeText"
         android:textColor="#ffffff"
         android:layout_marginEnd="22dp"
-        android:layout_marginTop="72dp"
         android:layout_alignTop="@+id/imageView"
         android:layout_toStartOf="@+id/button"
-        android:layout_x="103dp"
-        android:layout_y="196dp" />
-
+        android:layout_x="104dp"
+        android:layout_y="65dp" />
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_weight=".33"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="50"
+        android:textSize="32sp"
+        android:id="@+id/thievingText"
+        android:textColor="#ffffff"
+        android:layout_marginEnd="22dp"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_toStartOf="@+id/button"
+        android:layout_x="205dp"
+        android:layout_y="65dp" />
+    <TextView
+        android:layout_weight=".33"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="50"
+        android:textSize="32sp"
+        android:id="@+id/cookingText"
+        android:textColor="#ffffff"
+        android:layout_marginEnd="22dp"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_toStartOf="@+id/button"
+        android:layout_x="205dp"
+        android:layout_y="105dp" />
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_marginLeft="82dp"
+        android:layout_marginTop="7dp"
+        >
+    <TextView
+        android:layout_weight=".33"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="50"
         android:textSize="32sp"
         android:id="@+id/prayerText"
         android:textColor="#ffffff"
         android:layout_marginEnd="22dp"
-        android:layout_marginTop="72dp"
         android:layout_alignTop="@+id/imageView"
         android:layout_toStartOf="@+id/button"
-        android:layout_x="106dp"
-        android:layout_y="236dp" />
-
+        android:layout_x="206dp"
+        android:layout_y="152dp" />
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_weight=".33"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="50"
+        android:textSize="32sp"
+        android:id="@+id/craftText"
+        android:textColor="#ffffff"
+        android:layout_marginEnd="22dp"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_toStartOf="@+id/button"
+        android:layout_x="206dp"
+        android:layout_y="194dp" />
+    <TextView
+        android:layout_weight=".33"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="50"
+        android:textSize="32sp"
+        android:id="@+id/fireText"
+        android:textColor="#ffffff"
+        android:layout_marginEnd="22dp"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_toStartOf="@+id/button"
+        android:layout_x="203dp"
+        android:layout_y="238dp" />
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_marginLeft="82dp"
+        android:layout_marginTop="7dp"
+        >
+    <TextView
+        android:layout_weight=".33"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="50"
         android:textSize="32sp"
         android:id="@+id/magicText"
         android:textColor="#ffffff"
         android:layout_marginEnd="22dp"
-        android:layout_marginTop="72dp"
         android:layout_alignTop="@+id/imageView"
         android:layout_toStartOf="@+id/button"
-        android:layout_x="106dp"
-        android:layout_y="279dp" />
-
+        android:layout_x="203dp"
+        android:layout_y="278dp" />
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_weight=".33"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="50"
+        android:textSize="32sp"
+        android:id="@+id/fletchText"
+        android:textColor="#ffffff"
+        android:layout_marginEnd="22dp"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_toStartOf="@+id/button"
+        android:layout_x="204dp"
+        android:layout_y="326dp" />
+    <TextView
+        android:layout_weight=".33"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="50"
+        android:textSize="32sp"
+        android:id="@+id/woodText"
+        android:textColor="#ffffff"
+        android:layout_marginEnd="22dp"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_toStartOf="@+id/button"
+        android:layout_x="207dp"
+        android:layout_y="363dp" />
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_marginLeft="82dp"
+        android:layout_marginTop="7dp"
+        >
+    <TextView
+        android:layout_weight=".33"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="50"
         android:textSize="32sp"
         android:id="@+id/runeText"
         android:textColor="#ffffff"
         android:layout_marginEnd="22dp"
-        android:layout_marginTop="72dp"
         android:layout_alignTop="@+id/imageView"
         android:layout_toStartOf="@+id/button"
-        android:layout_x="107dp"
-        android:layout_y="323dp" />
-
+        android:layout_x="204dp"
+        android:layout_y="410dp" />
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_weight=".33"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="50"
+        android:textSize="32sp"
+        android:id="@+id/slayerText"
+        android:textColor="#ffffff"
+        android:layout_marginEnd="22dp"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_toStartOf="@+id/button"
+        android:layout_x="106dp"
+        android:layout_y="111dp" />
+    <TextView
+        android:layout_weight=".33"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="50"
+        android:textSize="32sp"
+        android:id="@+id/farmText"
+        android:textColor="#ffffff"
+        android:layout_marginEnd="22dp"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_toStartOf="@+id/button"
+        android:layout_x="106dp"
+        android:layout_y="150dp" />
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_marginLeft="82dp"
+        android:layout_marginTop="7dp"
+        >
+    <TextView
+        android:layout_weight=".33"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="50"
         android:textSize="32sp"
         android:id="@+id/buildText"
         android:textColor="#ffffff"
         android:layout_marginEnd="22dp"
-        android:layout_marginTop="72dp"
         android:layout_alignTop="@+id/imageView"
         android:layout_toStartOf="@+id/button"
-        android:layout_x="109dp"
-        android:layout_y="368dp" />
-
+        android:layout_x="103dp"
+        android:layout_y="196dp" />
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_weight=".33"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="50"
+        android:textSize="32sp"
+        android:id="@+id/huntText"
+        android:textColor="#ffffff"
+        android:layout_marginEnd="22dp"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_toStartOf="@+id/button"
+        android:layout_x="106dp"
+        android:layout_y="236dp" />
+    <TextView
+        android:layout_weight=".33"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="50"
+        android:textSize="32sp"
+        android:id="@+id/summonText"
+        android:textColor="#ffffff"
+        android:layout_marginEnd="22dp"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_toStartOf="@+id/button"
+        android:layout_x="106dp"
+        android:layout_y="279dp" />
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_marginLeft="82dp"
+        android:layout_marginTop="7dp"
+        >
+    <TextView
+        android:layout_weight=".33"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="50"
         android:textSize="32sp"
         android:id="@+id/dungeonText"
         android:textColor="#ffffff"
         android:layout_marginEnd="22dp"
-        android:layout_marginTop="72dp"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_toStartOf="@+id/button"
+        android:layout_x="107dp"
+        android:layout_y="323dp" />
+    <TextView
+        android:layout_weight=".33"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="50"
+        android:textSize="32sp"
+        android:id="@+id/divinationText"
+        android:textColor="#ffffff"
+        android:layout_marginEnd="22dp"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_toStartOf="@+id/button"
+        android:layout_x="109dp"
+        android:layout_y="368dp" />
+    <TextView
+        android:layout_weight=".33"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="50"
+        android:textSize="32sp"
+        android:id="@+id/inventionText"
+        android:textColor="#ffffff"
+        android:layout_marginEnd="22dp"
         android:layout_alignTop="@+id/imageView"
         android:layout_toStartOf="@+id/button"
         android:layout_x="107dp"
         android:layout_y="412dp" />
-
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_marginLeft="78dp"
+        android:layout_marginTop="5dp"
+        >
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_weight=".33"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="2500"
         android:textSize="30sp"
         android:id="@+id/totalText"
         android:textColor="#ffffff"
         android:layout_marginEnd="22dp"
-        android:layout_marginTop="72dp"
         android:layout_alignTop="@+id/imageView"
         android:layout_toStartOf="@+id/button"
         android:layout_x="91dp"
         android:layout_y="464dp" />
-
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_weight=".33"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="50"
         android:textSize="32sp"
         android:id="@+id/textView30"
         android:textColor="#ffffff"
         android:layout_marginEnd="22dp"
-        android:layout_marginTop="72dp"
         android:layout_alignTop="@+id/imageView"
         android:layout_toStartOf="@+id/button"
         android:layout_x="204dp"
         android:layout_y="462dp" />
-
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_weight=".33"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="50"
         android:textSize="32sp"
         android:id="@+id/textView31"
         android:textColor="#ffffff"
         android:layout_marginEnd="22dp"
-        android:layout_marginTop="72dp"
         android:layout_alignTop="@+id/imageView"
         android:layout_toStartOf="@+id/button"
         android:layout_x="298dp"
         android:layout_y="464dp" />
-
-    <Button
-        android:text="Button"
-        android:layout_width="43dp"
-        android:layout_height="wrap_content"
-        android:layout_x="1dp"
-        android:layout_y="19dp"
-        android:id="@+id/button15"
-        android:onClick="button15"/>
-
-</AbsoluteLayout>
+        </LinearLayout>
+</LinearLayout>
+</FrameLayout>
