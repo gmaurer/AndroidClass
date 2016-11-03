@@ -11,7 +11,7 @@ public class PlayerSkills extends AppCompatActivity{
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        //String user = "triggerkin";
+        String user = "triggerkin";
         super.onCreate(savedInstanceState);
         setContentView(R.layout.player_skills);
 
@@ -44,11 +44,36 @@ public class PlayerSkills extends AppCompatActivity{
         TextView inv = (TextView)findViewById(R.id.inventionText);
 
         TextView tot = (TextView)findViewById(R.id.totalText);
-        str.setText("HE");
 
 
-        att.setText(Integer.toString(1));
-
+        att.setText();
+        str.setText();
+        def.setText();
+        ran.setText();
+        pra.setText();
+        mag.setText();
+        con.setText();
+        cra.setText();
+        min.setText();
+        smi.setText();
+        fis.setText();
+        coo.setText();
+        fir.setText();
+        woo.setText();
+        run.setText();
+        dun.setText();
+        agi.setText();
+        her.setText();
+        thi.setText();
+        fle.setText();
+        sla.setText();
+        far.setText();
+        cons.setText();
+        hun.setText();
+        sum.setText();
+        div.setText();
+        inv.setText();
+        tot.setText();
 
 
 
