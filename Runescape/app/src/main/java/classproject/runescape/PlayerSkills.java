@@ -45,9 +45,16 @@ public class PlayerSkills extends AppCompatActivity{
 
         TextView tot = (TextView)findViewById(R.id.totalText);
 
+        ApiRetrievalClass temp = new ApiRetrievalClass();
 
-        att.setText();
-        str.setText();
+        SkillsHolder skillz = temp.retrieveSkills("gogofatplaya");
+
+        att.setText(skillz.Skills[1][1]);
+        def.setText(skillz.Skills[1][0]);
+        ran.setText(skillz.Skills[1][2]);
+        pra.setText(skillz.Skills[1][3]);
+        str.setText("gay");
+        /*str.setText();
         def.setText();
         ran.setText();
         pra.setText();
@@ -73,7 +80,7 @@ public class PlayerSkills extends AppCompatActivity{
         sum.setText();
         div.setText();
         inv.setText();
-        tot.setText();
+        tot.setText();*/
 
 
 
