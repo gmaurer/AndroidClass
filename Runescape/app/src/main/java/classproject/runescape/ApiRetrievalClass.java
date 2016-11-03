@@ -11,18 +11,18 @@ import java.net.URL;
 
 
 public class ApiRetrievalClass {
-    // These two need to be declared outside the try/catch
-    // so that they can be closed in the finally block.
     HttpURLConnection urlConnection = null;
     BufferedReader reader = null;
 
-    // Will contain the raw JSON response as a string.
-    String apiInfo = null;
+    public SkillsHolder retrieveSkills(String userName){
+        String urlstring;
 
-    public String json() {
+        urlstring = "http://services.runescape.com/m=hiscore/index_lite.ws?player=" + userName;
+
+        SkillsHolder skills = new SkillsHolder();
+
         try {
-            URL url = new URL("");
-
+            URL url = new URL(urlstring);
             urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod("GET");
             urlConnection.connect();
@@ -30,7 +30,6 @@ public class ApiRetrievalClass {
             InputStream inputStream = urlConnection.getInputStream();
             StringBuffer buffer = new StringBuffer();
             if (inputStream == null) {
-                return null;
             }
             reader = new BufferedReader(new InputStreamReader(inputStream));
 
@@ -40,13 +39,16 @@ public class ApiRetrievalClass {
             }
 
             if (buffer.length() == 0) {
-                return null;
+                SkillsHolder badtemp =  new SkillsHolder();
+                badtemp.CreateError();
+                return badtemp;
             }
-            apiInfo = buffer.toString();
-        } catch (IOException e) {
-            Log.e("PlaceholderFragment", "Error ", e);
-            // to parse it.
-            return null;
+            String rawData = buffer.toString();
+            SkillsHolder output = RawStringParser(rawData);
+        } catch (Exception e) {
+            SkillsHolder badtemp =  new SkillsHolder();
+            badtemp.CreateError();
+            return badtemp;
         } finally {
             if (urlConnection != null) {
                 urlConnection.disconnect();
@@ -58,9 +60,20 @@ public class ApiRetrievalClass {
                     Log.e("PlaceholderFragment", "Error closing stream", e);
                 }
             }
-            return "error";
+            SkillsHolder badtemp =  new SkillsHolder();
+            badtemp.CreateError();
+            return badtemp;
         }
     }
 
-
+    public SkillsHolder RawStringParser(String rawdata){
+        SkillsHolder output = new SkillsHolder();
+        String[] indvSkills = rawdata.split(" ");
+        String[] temp;
+        for(int i = 0; i < 28; i++){
+            temp = indvSkills[i].split(",");
+            output.AddSkill(temp[1], temp[2], temp[0]);
+        }
+        return output;
+    }
 }
