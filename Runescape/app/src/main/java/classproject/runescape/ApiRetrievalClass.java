@@ -31,8 +31,11 @@ public class ApiRetrievalClass {
 
             Log.d("aaaa",urlstring);
             InputStream inputStream = urlConnection.getInputStream();
+            Log.d("bae",urlstring);
             StringBuffer buffer = new StringBuffer();
+            Log.d("day",urlstring);
             if (inputStream == null) {
+                Log.d("null",urlstring);
             }
             reader = new BufferedReader(new InputStreamReader(inputStream));
             Log.d("bbbb",urlstring);

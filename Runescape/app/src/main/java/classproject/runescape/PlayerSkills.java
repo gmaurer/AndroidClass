@@ -50,37 +50,33 @@ public class PlayerSkills extends AppCompatActivity{
         SkillsHolder skillz = temp.retrieveSkills("gogofatplaya");
 
         att.setText(skillz.Skills[1][1]);
-        def.setText(skillz.Skills[1][0]);
-        ran.setText(skillz.Skills[1][2]);
-        pra.setText(skillz.Skills[1][3]);
-        str.setText("gay");
-        /*str.setText();
-        def.setText();
-        ran.setText();
-        pra.setText();
-        mag.setText();
-        con.setText();
-        cra.setText();
-        min.setText();
-        smi.setText();
-        fis.setText();
-        coo.setText();
-        fir.setText();
-        woo.setText();
-        run.setText();
-        dun.setText();
-        agi.setText();
-        her.setText();
-        thi.setText();
-        fle.setText();
-        sla.setText();
-        far.setText();
-        cons.setText();
-        hun.setText();
-        sum.setText();
-        div.setText();
-        inv.setText();
-        tot.setText();*/
+        str.setText(skillz.Skills[3][1]);
+        def.setText(skillz.Skills[2][1]);
+        ran.setText(skillz.Skills[5][1]);
+        pra.setText(skillz.Skills[6][1]);
+        mag.setText(skillz.Skills[7][1]);
+        con.setText(skillz.Skills[4][1]);
+        cra.setText(skillz.Skills[13][1]);
+        min.setText(skillz.Skills[15][1]);
+        smi.setText(skillz.Skills[14][1]);
+        fis.setText(skillz.Skills[11][1]);
+        coo.setText(skillz.Skills[8][1]);
+        fir.setText(skillz.Skills[12][1]);
+        woo.setText(skillz.Skills[9][1]);
+        run.setText(skillz.Skills[21][1]);
+        dun.setText(skillz.Skills[25][1]);
+        agi.setText(skillz.Skills[17][1]);
+        her.setText(skillz.Skills[16][1]);
+        thi.setText(skillz.Skills[18][1]);
+        fle.setText(skillz.Skills[10][1]);
+        sla.setText(skillz.Skills[19][1]);
+        far.setText(skillz.Skills[20][1]);
+        cons.setText(skillz.Skills[23][1]);
+        hun.setText(skillz.Skills[22][1]);
+        sum.setText(skillz.Skills[24][1]);
+        div.setText(skillz.Skills[26][1]);
+        inv.setText(skillz.Skills[27][1]);
+        tot.setText(skillz.Skills[0][1]);
 
 
 
