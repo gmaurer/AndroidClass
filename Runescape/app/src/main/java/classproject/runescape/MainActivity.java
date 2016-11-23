@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity   {
 
     }
     public void openPlayerSkills(View v){
-        Intent i = new Intent(getApplicationContext(),PlayerSkills.class);
+        Intent i = new Intent(getApplicationContext(),sendUser.class);
         startActivity(i);
 
     }
