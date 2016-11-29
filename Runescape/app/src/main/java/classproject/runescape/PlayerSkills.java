@@ -11,11 +11,11 @@ public class PlayerSkills extends AppCompatActivity{
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        String user = "gogofatplaya";                   //TEMP HARDCORED, LOOK AT USER1 TO SEE ACTUAL USER
+        //String user = "gogofatplaya";                   //TEMP HARDCORED, LOOK AT USER1 TO SEE ACTUAL USER
         super.onCreate(savedInstanceState);
         setContentView(R.layout.player_skills);
         Intent in = getIntent();
-        String user1 = in.getExtras().getString("username");//THIS WILL GIVE YOU THE USERNAME FROM
+        String user = in.getExtras().getString("username");//THIS WILL GIVE YOU THE USERNAME FROM
                                                             //THE PREVIOUS PAGE CHANGE THE BELOW EXECUTE TO THIS VARIABLE
 
 
