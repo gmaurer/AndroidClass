@@ -1,55 +1,79 @@
 package classproject.runescape;
-
+import android.os.AsyncTask;
 import android.util.Log;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+public class ApiRetrievalClass extends AsyncTask<String, Void, SkillsHolder> {
+    private RetrivalCallBack mCallback;
+
+    public ApiRetrievalClass(RetrivalCallBack callBack) {
+        mCallback = callBack;
+
+    }
+
+    @Override
+    protected SkillsHolder doInBackground(String... params) {
+        return retrieveSkills(params[0]);
+    }
+
+    protected void onPostExecute(SkillsHolder result) {
+        mCallback.onSuccess(result);
+    }
+
+    public interface RetrivalCallBack {
+        void onSuccess(SkillsHolder skillsHolder);
+
+    }
 
 
-public class ApiRetrievalClass {
     HttpURLConnection urlConnection = null;
     BufferedReader reader = null;
 
-    public SkillsHolder retrieveSkills(String userName){
+    public SkillsHolder retrieveSkills(final String userName) {
         String urlstring;
 
         urlstring = "http://services.runescape.com/m=hiscore/index_lite.ws?player=" + userName;
 
-        SkillsHolder skills = new SkillsHolder();
-
+        SkillsHolder skills;
         try {
             URL url = new URL(urlstring);
             urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod("GET");
-            urlConnection.connect();
+
+            //urlConnection.connect();
 
             InputStream inputStream = urlConnection.getInputStream();
             StringBuffer buffer = new StringBuffer();
             if (inputStream == null) {
             }
             reader = new BufferedReader(new InputStreamReader(inputStream));
-
             String line;
             while ((line = reader.readLine()) != null) {
                 buffer.append(line + "\n");
             }
 
+            Log.d("cccc", urlstring);
             if (buffer.length() == 0) {
-                SkillsHolder badtemp =  new SkillsHolder();
+                SkillsHolder badtemp = new SkillsHolder();
                 badtemp.CreateError();
-                return badtemp;
+                skills = badtemp;
+                return skills;
             }
             String rawData = buffer.toString();
             SkillsHolder output = RawStringParser(rawData);
+            Log.d("here", urlstring);
+            skills = output;
         } catch (Exception e) {
-            SkillsHolder badtemp =  new SkillsHolder();
+            Log.d("asdf", urlstring);
+            SkillsHolder badtemp = new SkillsHolder();
             badtemp.CreateError();
-            return badtemp;
+            skills = badtemp;
         } finally {
+            Log.d("qwerty", urlstring);
             if (urlConnection != null) {
                 urlConnection.disconnect();
             }
@@ -60,19 +84,21 @@ public class ApiRetrievalClass {
                     Log.e("PlaceholderFragment", "Error closing stream", e);
                 }
             }
-            SkillsHolder badtemp =  new SkillsHolder();
-            badtemp.CreateError();
-            return badtemp;
         }
+
+        return skills;
+
     }
 
-    public SkillsHolder RawStringParser(String rawdata){
+    public SkillsHolder RawStringParser(String rawdata) {
         SkillsHolder output = new SkillsHolder();
-        String[] indvSkills = rawdata.split(" ");
+        String[] indvSkills = rawdata.split("\n");
         String[] temp;
-        for(int i = 0; i < 28; i++){
+        for (int i = 0; i < indvSkills.length; i++) {
             temp = indvSkills[i].split(",");
-            output.AddSkill(temp[1], temp[2], temp[0]);
+            if (temp.length == 3) {
+                output.AddSkill(temp[1], temp[2], temp[0]);
+            }
         }
         return output;
     }

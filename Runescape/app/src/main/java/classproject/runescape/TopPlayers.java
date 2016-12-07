@@ -11,7 +11,7 @@ public class TopPlayers extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.top_players);
     }
-    public void goBack(View v){
+    public void goBack(View v) {
         Intent i = new Intent(getApplicationContext(),MainActivity.class);
         startActivity(i);
 

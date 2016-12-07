@@ -26,6 +26,7 @@
         <activity android:name=".SkillDiaries" />
         <activity android:name=".TopPlayers" />
         <activity android:name=".Tutorials" />
+        <activity android:name=".sendUser" />
     </application>
 
 </manifest>
